@@ -1,1 +1,1 @@
-My portfolia website, now live at: https://michaelkosmider.github.io/portfolio/
+My portfolio website, now live at: https://michaelkosmider.github.io/portfolio/
