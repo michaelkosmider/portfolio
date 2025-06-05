@@ -51,11 +51,14 @@
       font-size: 0.95rem;
     }
     .card a {
-      display: inline-block;
+      display: block;
       margin-top: 1rem;
       text-decoration: none;
       color: #2563eb;
       font-weight: bold;
+    }
+    a {
+      color: white
     }
     footer {
       text-align: center;
@@ -68,6 +71,7 @@
   <header>
     <h1>Michael Kosmider</h1>
     <p>Master's student at Georgia Tech, specializing in machine learning.</p>
+    <p>Contact: <a href="javascript:void(0)" id="showEmail">Email</a> | <a href="https://github.com/michaelkosmider?tab=repositories">GitHub</a> | <a href="https://www.linkedin.com/in/michael-kosmider/">LinkedIn</a></p>
   </header>
 
   <section class="about">
@@ -76,31 +80,27 @@
   </section>
 
   <section class="projects">
-    <div class="card">
-      <h3>Animations</h3>
-      <p>A fun project that displays interactive animations, implemented in JavaScript</p>
-      <a href="https://michaelkosmider.github.io/animations/" target="_blank">View Project</a>
-    </div>
-    <div class="card">
-      <h3>Drawing App</h3>
-      <p>A very basic web-based drawing application. Users can select various shapes, colors, and brush sizes.</p>
-      <a href="https://michaelkosmider.github.io/drawing-app/" target="_blank">View Project</a>
-    </div>
+
     <div class="card">
       <h3>Transformer Tutorial</h3>
-      <p>An in-depth tutorial on the theory and implementation of transformers. This tutorial takes you through each component of the transformer as shown in the original transformer paper "Attention is all you need".</p>
+      <p>An in-depth tutorial on the theory and implementation of transformers. This tutorial takes you through each component of the transformer as shown in the original transformer paper "Attention is all you need", and demostrates how to train a transformer for the task of machine translation using the multi30k dataset. </p>
       <a href="https://michaelkosmider.github.io/transformertutorial/" target="_blank">View Project</a>
     </div>
+
     <div class="card">
       <h3>Deep Learning Framework</h3>
       <p>A full deep learning framework implemented from scratch in NumPy. The framework contains modules with forward and backpropagation and standard optimizers. It is a massive undertaking and will be published soon as a python package along with a website for documentation.</p>
       <!-- <a href="#" target="_blank">View Project</a> -->
     </div>
-  </section>
 
-    <footer>    
-        <p>Contact: <a href="javascript:void(0)" id="showEmail">Email</a> | <a href="https://github.com/michaelkosmider?tab=repositories">GitHub</a> | <a href="https://www.linkedin.com/in/michael-kosmider/">LinkedIn</a></p>
-    </footer>
+    <div class="card">
+      <h3>Animations and Drawing App</h3>
+      <p>Two fun side projects demonstrating JavaScript proficiency. The first is a set of customizable animations, and the second is a minimal drawing application, where users can select from various shapes, colors, and brush sizes. </p>
+      <a href="https://michaelkosmider.github.io/animations/" target="_blank">View Animations</a>
+      <a href="https://michaelkosmider.github.io/animations/" target="_blank">View Drawing app</a>
+    </div>
+
+  </section>
   
   <script>
     const user = "michael.kosmider2";
