@@ -65,6 +65,27 @@
       padding: 2rem 1rem;
       color: #888;
     }
+
+  .education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.education-entry {
+  /* background: white; */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.education-entry h3 {
+  margin-top: 0;
+  color: #1f2937;
+}
   </style>
 </head>
 <body>
@@ -78,9 +99,17 @@
     <h2>About Me</h2>
     <p>I’m a graduate student (4.0 GPA) at Georgia Tech's OMSCS program, with a passion for developing deep learning algorithms from the ground up. I enjoy digging into the mathematical foundations and implementation details that make these models work, and I find it rewarding to build them from scratch. In addition to my focus on machine learning, I also have experience with multi-threaded systems programming in C/C++ and some knowledge of web development, which support my broader interests in software. </p>
   </section>
-
+    <section class="about">
+    <h2>Hard Skills, Concepts, and Projects</h2>
+    <p>
+      Python, NumPy, PyTorch, C/C++, JavaScript, HTML, CSS.
+    </p>
+    <p>
+      Deep learning fundamentals, strong mathematical background, multithreaded programming and OOP design.
+    </p>
+  </section>
   <section class="projects">
-
+    
     <div class="card">
       <h3>Transformer Tutorial</h3>
       <p>An in-depth tutorial on the theory and implementation of transformers. This tutorial takes you through, and builds in PyTorch, each component of the transformer as shown in the original transformer paper "Attention is all you need". It goes on to demostrate how to train a transformer for the task of machine translation using the multi30k dataset. </p>
@@ -89,19 +118,40 @@
 
     <div class="card">
       <h3>Deep Learning Framework</h3>
-      <p>A full-fledged deep learning framework implemented from scratch in NumPy, paired with a tutorial and documentation. The framework contains standard modules with forward and backpropagation, along with optimizers. With inspiration from my transformer project, I trained a transformer in my own framework from scratch.</p>
+      <p>A full-fledged deep learning framework implemented from scratch in NumPy, paired with a tutorial and documentation. The framework contains standard modules like linear and convolution layers, activation functions, and features an autograd system along with optimizers for model training. I successfully trained a ResNet using my own framework.</p>
       <a href="#" target="_blank">View Project</a>
     </div>
 
     <div class="card">
       <h3>Animations and Drawing App</h3>
-      <p>Two fun side projects demonstrating JavaScript proficiency. The first is a set of customizable animations, and the second is a minimal drawing application, where users can select from various shapes, colors, and brush sizes. </p>
+      <p>Two fun, less serious side projects demonstrating proficiency in vanilla HTML, CSS and JavaScript. The first is a set of customizable animations, and the second is a minimal drawing application, where users can select from various shapes, colors, and brush sizes. </p>
       <a href="https://michaelkosmider.github.io/animations/" target="_blank">View Animations</a>
       <a href="https://michaelkosmider.github.io/drawing-app/" target="_blank">View Drawing app</a>
     </div>
 
   </section>
+
   
+  <section class="about">
+    <h2>Education</h2>
+    <div class="education-container">
+      <div class="education-entry">
+        <h3>Master of Science</h3>
+        <p><strong>Georgia Institute of Technology</strong></p>
+        <p>2024–2026 (expected)</p>
+        <p>Computer Science with a specialization in Machine Learning. <strong>GPA:</strong> 4.0</p>
+      </div>
+
+      <div class="education-entry">
+        <h3>Bachelor of Science</h3>
+        <p><strong>McGill University</strong></p>
+        <p>Degree Granted in 2023</p>
+        <p>Major in Mathematics and Computer Science</p>
+      </div>
+    </div>
+  </section>
+
+
   <script>
     const user = "michael.kosmider2";
     const domain = "gmail.com";
