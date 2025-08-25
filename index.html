@@ -109,23 +109,29 @@
     </p>
   </section>
   <section class="projects">
-    
-    <div class="card">
-      <h3>Image Captioning</h3>
-      <p>I implemented and trained a ViT + decoder image captioner from scratch on the MS COCO dataset, achieving well structured English descriptions like "a herd of sheep standing on top of a lush green field ." I used a masked autoencoder to pre-train the ViT on unlabeled images, and used gradual encoder layer unfreezing for full captioner training. A writeup explains the methods in detail.</p>
-      <a href="https://github.com/michaelkosmider/image_captioning/blob/main/README.md" target="_blank">View Project</a>
-    </div>
 
     <div class="card">
       <h3>Deep Learning Framework</h3>
-      <p>A full-fledged deep learning framework implemented from scratch in NumPy, paired with a <a href="https://michaelkosmider.github.io/dlminiboxtutorial/" target="_blank">tutorial</a> and <a href="https://michaelkosmider.github.io/dlminibox_documentation/" target="_blank">documentation</a>. The framework contains standard modules (such as Linear and Convolution layers), functions and optimizers built on top of an autograd system. I successfully trained a CNN using my own framework, achieving over 80% on the CIFAR 10 dataset.</p>
+      <p>A full-fledged deep learning framework implemented from scratch in NumPy, paired with extensive documentation. The framework contains standard modules (such as Linear and Convolution layers), functions and optimizers built on top of an autograd system. I successfully trained a CNN using my own framework, achieving over 80% on the CIFAR 10 dataset.</p>
       <a href="https://michaelkosmider.github.io/dlminibox_documentation/" target="_blank">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Autograd Tutorial</h3>
+      <p>A nuanced explanation of the theory of backpropagation and its role in autograd systems. I formalize the inductive chain rule to bridge the gap between tensor valued backwards functions and single variable backpropagation. I personally found this gap confusing as a learner, and hope this tutorial helps explain compact form computation graphs with tensor variables. </p>
+      <a href="https://michaelkosmider.github.io/dlminiboxtutorial/" target="_blank">View Project</a>
     </div>
 
     <div class="card">
       <h3>Transformer Tutorial</h3>
       <p>An in-depth tutorial on the theory and implementation of transformers following "Attention is all you need". I showed how to build every transformer component from scratch, implemented beam search with KV caching, and demostrated how to train a transformer for the task of machine translation using the multi30k dataset. The transformer components are on <a href="https://pypi.org/project/transformer-components-michaelkosmider/" target="_blank">PyPi</a>.</p>
       <a href="https://michaelkosmider.github.io/transformertutorial/" target="_blank">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Image Captioning</h3>
+      <p>I implemented and trained a ViT + decoder image captioner from scratch on the MS COCO dataset, achieving well structured English descriptions like "a herd of sheep standing on top of a lush green field ." I used a masked autoencoder to pre-train the ViT on unlabeled images, and used gradual encoder layer unfreezing for full captioner training. A writeup explains the methods in detail.</p>
+      <a href="https://github.com/michaelkosmider/image_captioning/blob/main/README.md" target="_blank">View Project</a>
     </div>
 
     <div class="card">
