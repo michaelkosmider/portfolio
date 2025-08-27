@@ -6,7 +6,7 @@
   <title>Michael Kosmider | Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
       background: #f5f5f5;
@@ -21,15 +21,86 @@
     header h1 {
       margin: 0 0 0.5rem;
     }
-    .about, .projects, footer {
+    header a {
+      color: white;
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+    .content-section {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: 2.5rem auto;
       padding: 0 1rem;
     }
-    .about p {
+    .content-section h2 {
+      font-size: 2rem;
+      color: #1f2937;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    .content-section p {
       line-height: 1.6;
     }
-    .projects {
+    /* Skills Section */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #eef2ff;
+      color: #4338ca;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+    .concept-item {
+      background: #f9e1e7;
+      color: #e74245;
+    }
+    .skill-item:hover {
+      background-color: #e0e7ff;
+      border-color: #c7d2fe;
+    }
+    .concept-item:hover {
+      background: #f8d4dd;
+      border-color: #cd6e70;
+    }
+    .skill-item svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Education Section */
+    .education-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .education-entry {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      flex: 1 1 300px;
+      min-width: 280px;
+    }
+    .education-entry h3 {
+      margin-top: 0;
+      color: #1f2937;
+    }
+
+    /* Projects Section */
+    .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
@@ -39,138 +110,238 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 1.5rem;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
     }
     .card h3 {
       margin-top: 0;
     }
-    .card p {
+    .card ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
       font-size: 0.95rem;
+      flex-grow: 1;
+    }
+    .card ul li {
+      margin-bottom: 0.5rem;
     }
     .card > a {
       display: block;
-      margin-top: 1rem;
+      margin-top: auto;
       text-decoration: none;
       color: #2563eb;
       font-weight: bold;
     }
-    header a {
-      color: white
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
     }
+    .skill-pill {
+      background: #e0e7ff;
+      color: #2563eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+    .concept-pill {
+      background: #f9e1e7;
+      color: #e05558;
+    }
+    .additional-pill {
+      background: #faf7f8;
+      color: #6a6162;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
       color: #888;
+      max-width: 900px;
+      margin: 2rem auto;
     }
-
-  .education-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.education-entry {
-  /* background: white; */
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  flex: 1 1 300px;
-  min-width: 280px;
-}
-
-.education-entry h3 {
-  margin-top: 0;
-  color: #1f2937;
-}
   </style>
 </head>
 <body>
   <header>
     <h1>Michael Kosmider</h1>
     <p>Master's student at Georgia Tech, specializing in machine learning.</p>
-    <p>Contact: <a href="javascript:void(0)" id="showEmail">Email</a> | <a href="https://github.com/michaelkosmider?tab=repositories">GitHub</a> | <a href="https://www.linkedin.com/in/michael-kosmider/">LinkedIn</a></p>
+    <p><a href="javascript:void(0)" id="showEmail">Email</a> | <a href="https://github.com/michaelkosmider?tab=repositories" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/michael-kosmider/" target="_blank">LinkedIn</a></p>
   </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m a graduate student (4.0 GPA) at Georgia Tech's Online Master of Science in Computer Science, with a passion for developing deep learning algorithms from the ground up. I enjoy digging into the mathematical foundations and implementation details that make these models work, and I find it rewarding to build them from scratch. In addition to my focus on machine learning, I also have experience with multi-threaded systems programming in C/C++ and some knowledge of web development, which support my broader interests in software. </p>
-  </section>
-    <section class="about">
-    <h2>Hard Skills, Concepts, and Projects</h2>
-    <p>
-      Python, NumPy, PyTorch, Hugging Face, C/C++, JavaScript, HTML, CSS.
-    </p>
-    <p>
-      Deep learning fundamentals, NLP, computer vision, strong mathematical background, multithreaded programming and OOP design.
-    </p>
-  </section>
-  <section class="projects">
+  <main>
+    <section class="content-section">
+      <h2>About Me</h2>
+      <p>I’m a graduate student (4.0 GPA) at Georgia Tech's Online Master of Science in Computer Science, with a passion for developing deep learning algorithms from the ground up. I enjoy digging into the mathematical foundations and implementation details that make these models work, and I find it rewarding to build them from scratch. In addition to my focus on machine learning, I also have experience with multi-threaded systems programming in C/C++, and with front end web development, both of which support my broader interests in software.</p>
+    </section>
 
-    <div class="card">
-      <h3>Deep Learning Framework</h3>
-      <p>A full-fledged deep learning framework implemented from scratch in NumPy, paired with extensive documentation. The framework contains standard modules (such as Linear and Convolution layers), functions and optimizers built on top of an autograd system. I successfully trained a CNN using my own framework, achieving over 80% on the CIFAR 10 dataset.</p>
-      <a href="https://michaelkosmider.github.io/dlminibox_documentation/" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Autograd Tutorial</h3>
-      <p>A nuanced explanation of the theory of backpropagation and its role in autograd systems. I formalize the inductive chain rule to bridge the gap between tensor valued backwards functions and single variable backpropagation. I personally found this gap confusing as a learner, and hope this tutorial helps explain compact form computation graphs with tensor variables. </p>
-      <a href="https://michaelkosmider.github.io/dlminiboxtutorial/" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Transformer Tutorial</h3>
-      <p>An in-depth tutorial on the theory and implementation of transformers following "Attention is all you need". I showed how to build every transformer component from scratch, implemented beam search with KV caching, and demostrated how to train a transformer for the task of machine translation using the multi30k dataset. The transformer components are on <a href="https://pypi.org/project/transformer-components-michaelkosmider/" target="_blank">PyPi</a>.</p>
-      <a href="https://michaelkosmider.github.io/transformertutorial/" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Image Captioning</h3>
-      <p>I implemented and trained a ViT + decoder image captioner from scratch on the MS COCO dataset, achieving well structured English descriptions like "a herd of sheep standing on top of a lush green field ." I used a masked autoencoder to pre-train the ViT on unlabeled images, and used gradual encoder layer unfreezing for full captioner training. A writeup explains the methods in detail.</p>
-      <a href="https://github.com/michaelkosmider/image_captioning/blob/main/README.md" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Animations and Drawing App</h3>
-      <p>Two fun, less serious side projects demonstrating proficiency in vanilla HTML, CSS and JavaScript. The first is a set of customizable animations, and the second is a minimal drawing application, where users can select from various shapes, colors, and brush sizes. </p>
-      <a href="https://michaelkosmider.github.io/animations/" target="_blank">View Animations</a>
-      <a href="https://michaelkosmider.github.io/drawing-app/" target="_blank">View Drawing app</a>
-    </div>
-
-  </section>
-
-  
-  <section class="about">
-    <h2>Education</h2>
-    <div class="education-container">
-      <div class="education-entry">
-        <h3>Master of Science</h3>
-        <p><strong>Georgia Institute of Technology</strong></p>
-        <p>2024–2026 (expected)</p>
-        <p>Computer Science with a specialization in Machine Learning. <strong>GPA:</strong> 4.0</p>
+    <section class="content-section">
+      <h2>Skills and Concepts</h2>
+      <div class="skills-container">
+        <div class="skill-item "><span>Python</span></div>
+        <div class="skill-item"><span>NumPy</span></div>
+        <div class="skill-item"><span>PyTorch</span></div>
+        <div class="skill-item"><span>Hugging Face</span></div>
+        <div class="skill-item"><span>C</span></div>
+        <div class="skill-item"><span>C++</span></div>
+        <div class="skill-item"><span>JavaScript</span></div>
+        <div class="skill-item"><span>HTML</span></div>
+        <div class="skill-item"><span>CSS</span></div>
+        <div class="skill-item"><span>Git and Github</span></div>
+        <div class="skill-item concept-item"><span>Deep Learning Fundamentals</span></div>
+        <div class="skill-item concept-item"><span>NLP</span></div>
+        <div class="skill-item concept-item"><span>Computer Vision</span></div>
+        <div class="skill-item concept-item"><span>Strong Mathematical Background</span></div>
+        <div class="skill-item concept-item"><span>Remote Procedure Calls</span></div>
+        <div class="skill-item concept-item"><span>Multi-threaded Programming</span></div>
+        <div class="skill-item concept-item"><span>Object Oriented Programming</span></div>
       </div>
+    </section>
 
-      <div class="education-entry">
-        <h3>Bachelor of Science</h3>
-        <p><strong>McGill University</strong></p>
-        <p>Degree Granted in 2023</p>
-        <p>Major in Mathematics and Computer Science</p>
+    <section class="content-section">
+      <h2>Education</h2>
+      <div class="education-container">
+        <div class="education-entry">
+          <h3>Master of Science</h3>
+          <p><strong>Georgia Institute of Technology</strong></p>
+          <p>2024–2027 (expected)</p>
+          <p>Computer Science with a specialization in Machine Learning. <strong>GPA:</strong> 4.0</p>
+        </div>
+        <div class="education-entry">
+          <h3>Bachelor of Science</h3>
+          <p><strong>McGill University</strong></p>
+          <p>Degree Granted in 2023</p>
+          <p>Major in Mathematics and Computer Science</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="content-section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <h3>Deep Learning Framework</h3>
+          <div class="skills-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill concept-pill">Deep Learning Fundamentals</span>
+            <span class="skill-pill additional-pill">Autograd</span>
+            <span class="skill-pill additional-pill">CNN</span>
+          </div>
+          <ul>
+            <li>A full-fledged deep learning framework implemented from scratch in NumPy, paired with extensive documentation.</li>
+            <li>The framework contains standard modules (such as Linear and Convolution layers), functions and optimizers built on top of an autograd system.</li>
+            <li>I successfully trained a CNN using my own framework, achieving over 80% on the CIFAR 10 dataset.</li>
+          </ul>
+          <a href="https://michaelkosmider.github.io/dlminibox_documentation/" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Autograd Tutorial</h3>
+          <div class="skills-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill concept-pill">Deep Learning Fundamentals</span>
+            <span class="skill-pill concept-pill">Strong Mathematical Background</span>
+          </div>
+          <ul>
+            <li>A nuanced explanation of the theory of backpropagation and its role in autograd systems.</li>
+            <li>Formalizes the inductive chain rule to bridge the gap between tensor valued backwards functions and single variable backpropagation.</li>
+            <li>Aimed to clarify common confusions for learners regarding compact form computation graphs with tensor variables.</li>
+          </ul>
+          <a href="https://michaelkosmider.github.io/dlminiboxtutorial/" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Transformer Tutorial</h3>
+          <div class="skills-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill concept-pill">Deep Learning Fundamentals</span>
+            <span class="skill-pill concept-pill">NLP</span>
+            <span class="skill-pill additional-pill">KV Caching + KBeams</span>
+          </div>
+          <ul>
+            <li>An in-depth tutorial on the theory and implementation of transformers following "Attention is all you need".</li>
+            <li>Demonstrated how to build every transformer component from scratch, and also beam search with KV caching.</li>
+            <li>Trained a transformer for machine translation using the multi30k dataset. Transformer components are available on <a href="https://pypi.org/project/transformer-components-michaelkosmider/" target="_blank">PyPi</a>.</li>
+          </ul>
+          <a href="https://michaelkosmider.github.io/transformertutorial/" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Image Captioning</h3>
+          <div class="skills-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">Hugging Face</span>
+            <span class="skill-pill concept-pill">Deep Learning Fundamentals</span>
+            <span class="skill-pill concept-pill">NLP</span>
+            <span class="skill-pill concept-pill">Computer Vision</span>
+            
+          </div>
+          <ul>
+            <li>Implemented and trained a ViT + decoder image captioner from scratch on the MS COCO dataset.</li>
+            <li>Achieved well-structured English descriptions (e.g., "a herd of sheep standing on top of a lush green field").</li>
+            <li>Used a masked autoencoder for ViT pre-training on unlabeled images, with gradual encoder layer unfreezing + AdamW with warmup and cosine annealing for full captioner training, described in a detailed writeup.</li>
+          </ul>
+          <a href="https://github.com/michaelkosmider/image_captioning/blob/main/README.md" target="_blank">View Project</a>
+        </div>
+
+        <div class="card">
+          <h3>Distributed File Server with gRPC</h3>
+          <div class="skills-pills">
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill concept-pill">Remote Procedure Calls</span>
+            <span class="skill-pill concept-pill">Multi-threaded Programming</span>
+            <span class="skill-pill concept-pill">Object Oriented Programming</span>
+          </div>
+          <ul>
+            <li>Implemented a distributed file system based on the Andrew File System using C++ and remote procedure calls (gRPC).</li>
+            <li>Using a weakly consistent file caching strategy, any client can store, fetch, delete, and list all files with guaranteed eventual synchronization.</li>
+            <li>Multi-threaded and multi-process design with per-file locking mechanism combined with a streaming RPC with deadline handling ensures data transfer speed and integrity.</li>
+          </ul>
+          <a href="https://github.com/michaelkosmider/image_captioning/blob/main/README.md" target="_blank">View Project</a>
+        </div>
+
+        <div class="card">
+          <h3>Animations and Drawing App</h3>
+          <div class="skills-pills">
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill concept-pill">Object Oriented Programming</span>
+          </div>
+          <ul>
+            <li>Two fun side projects demonstrating proficiency in vanilla HTML, CSS, and JavaScript.</li>
+            
+            <li>The first is a set of customizable and visually appealing animations, combining user mouse movements with math to create a vector field.</li>
+          </ul>
+          <a href="https://michaelkosmider.github.io/animations/" target="_blank">View Animations</a>
+          <ul>
+            <li>The second is a minimal drawing application where users can select from various shapes, colors, and brush sizes.</li>
+          </ul>
+
+          <a href="https://michaelkosmider.github.io/drawing-app/" target="_blank">View Drawing app</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
 
   <script>
     const user = "michael.kosmider2";
     const domain = "gmail.com";
     const email = `${user}@${domain}`;
     
-    document.getElementById("showEmail").addEventListener("click", function() {
-      this.innerHTML = `<a href='mailto:${email}'>${email}</a>`;
+    document.getElementById("showEmail").addEventListener("click", function(e) {
+      e.preventDefault();
+      this.outerHTML = `<a href='mailto:${email}'>${email}</a>`;
     });
   </script>
 </body>
