@@ -173,36 +173,54 @@
 <body>
   <header>
     <h1>Michael Kosmider</h1>
-    <p>Master's student at Georgia Tech, specializing in machine learning.</p>
+    <p>Backend Developer Intern at Kinaxis | C++ systems, debugging, and machine learning</p>
     <p><a href="javascript:void(0)" id="showEmail">Email</a> | <a href="https://github.com/michaelkosmider?tab=repositories" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/michael-kosmider/" target="_blank">LinkedIn</a></p>
   </header>
 
   <main>
     <section class="content-section">
       <h2>About Me</h2>
-      <p>I’m a graduate student at Georgia Tech's Online Master of Science in Computer Science, with a passion for developing deep learning algorithms from the ground up. I enjoy digging into the mathematical foundations and implementation details that make these models work, and I find it rewarding to build them from scratch. In addition to my focus on machine learning, I also have experience with multi-threaded systems programming in C/C++, and with front end web development, both of which support my broader interests in software.</p>
+      <p>I’m a backend developer intern at Kinaxis in Ottawa, where I debug and improve a performance-sensitive, multithreaded C++ database server. I co-maintain a tool that replays customer queries from logs to reproduce and investigate issues, and I work on memory leaks, server crashes, logging defects, and automated tests. Outside work, I build systems and deep learning projects from the ground up, including a distributed file system, an autograd framework, and a transformer. I enjoy understanding how complex software works and making it more reliable.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Work Experience</h2>
+      <div class="education-container">
+        <div class="education-entry">
+          <h3>Backend Developer Intern — Kinaxis</h3>
+          <p>Ottawa, ON | September 2025–present</p>
+          <ul>
+            <li>Diagnose and fix memory leaks, access violations, server crashes, and logging defects in a multithreaded C++ database server. One leak fix reduced memory usage from approximately 5 GB to 500 MB in a repeated-query test.</li>
+            <li>Co-maintain an internal tool that consumes customer logs and replays queries against the database to reproduce issues; wrote approximately half of its current code.</li>
+            <li>Monitor daily automated builds, investigating and triaging approximately 300 test failures; fix issues or route them to the appropriate developer. Write NUnit tests in C# to help prevent regressions.</li>
+            <li>Collaborate with engineers through code reviews, technical discussions, and validation; help onboard another intern.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="content-section">
       <h2>Skills and Concepts</h2>
       <div class="skills-container">
-        <div class="skill-item "><span>Python</span></div>
+        <div class="skill-item"><span>C++</span></div>
+        <div class="skill-item"><span>C</span></div>
+        <div class="skill-item"><span>Python</span></div>
+        <div class="skill-item"><span>C#</span></div>
+        <div class="skill-item"><span>Git</span></div>
+        <div class="skill-item"><span>Visual Studio</span></div>
+        <div class="skill-item"><span>NUnit</span></div>
+        <div class="skill-item"><span>gRPC</span></div>
         <div class="skill-item"><span>NumPy</span></div>
         <div class="skill-item"><span>PyTorch</span></div>
         <div class="skill-item"><span>Hugging Face</span></div>
-        <div class="skill-item"><span>C</span></div>
-        <div class="skill-item"><span>C++</span></div>
         <div class="skill-item"><span>JavaScript</span></div>
         <div class="skill-item"><span>HTML</span></div>
         <div class="skill-item"><span>CSS</span></div>
-        <div class="skill-item"><span>Git and Github</span></div>
-        <div class="skill-item concept-item"><span>Deep Learning Fundamentals</span></div>
-        <div class="skill-item concept-item"><span>NLP</span></div>
-        <div class="skill-item concept-item"><span>Computer Vision</span></div>
-        <div class="skill-item concept-item"><span>Strong Mathematical Background</span></div>
-        <div class="skill-item concept-item"><span>Remote Procedure Calls</span></div>
-        <div class="skill-item concept-item"><span>Multi-threaded Programming</span></div>
-        <div class="skill-item concept-item"><span>Object Oriented Programming</span></div>
+        <div class="skill-item concept-item"><span>Multithreaded programming</span></div>
+        <div class="skill-item concept-item"><span>Distributed systems</span></div>
+        <div class="skill-item concept-item"><span>Deep learning</span></div>
+        <div class="skill-item concept-item"><span>Natural language processing</span></div>
+        <div class="skill-item concept-item"><span>Computer vision</span></div>
       </div>
     </section>
 
@@ -210,16 +228,16 @@
       <h2>Education</h2>
       <div class="education-container">
         <div class="education-entry">
-          <h3>Master of Science</h3>
+          <h3>Graduate Coursework in Computer Science</h3>
           <p><strong>Georgia Institute of Technology</strong></p>
-          <p>2024–2027 (expected)</p>
-          <p>Computer Science with a specialization in Machine Learning. <strong>GPA:</strong> 4.0</p>
+          <p>2024–spring 2025</p>
+          <p>Completed coursework in the Online Master of Science in Computer Science program; studies paused to focus on industry experience. <strong>GPA:</strong> 4.0</p>
         </div>
         <div class="education-entry">
           <h3>Bachelor of Science</h3>
           <p><strong>McGill University</strong></p>
-          <p>Degree Granted in 2023</p>
-          <p>Major in Mathematics and Computer Science</p>
+          <p>February 2023</p>
+          <p>Double major in Mathematics and Computer Science</p>
         </div>
       </div>
     </section>
@@ -265,12 +283,12 @@
             <span class="skill-pill">PyTorch</span>
             <span class="skill-pill concept-pill">Deep Learning Fundamentals</span>
             <span class="skill-pill concept-pill">NLP</span>
-            <span class="skill-pill additional-pill">KV Caching + KBeams</span>
+            <span class="skill-pill additional-pill">KV caching and beam search</span>
           </div>
           <ul>
             <li>An in-depth tutorial on the theory and implementation of transformers following "Attention is all you need".</li>
             <li>Demonstrated how to build every transformer component from scratch, and also beam search with KV caching.</li>
-            <li>Trained a transformer for machine translation using the multi30k dataset. Transformer components are available on <a href="https://pypi.org/project/transformer-components-michaelkosmider/" target="_blank">PyPi</a>.</li>
+            <li>Trained a transformer for machine translation using the multi30k dataset. Transformer components are available on <a href="https://pypi.org/project/transformer-components-michaelkosmider/" target="_blank">PyPI</a>.</li>
           </ul>
           <a href="https://michaelkosmider.github.io/transformertutorial/" target="_blank">View Project</a>
         </div>
@@ -339,7 +357,7 @@
           </div>
           <ul>
             <li>Used C sockets to develop a file transfer protocol from scratch.</li>
-            <li>Created scalable client and serverside APIs, inspired by the "libcurl easy interface" and the python http server, respectively.</li>
+            <li>Created scalable client and server-side APIs, inspired by the "libcurl easy interface" and the Python HTTP server, respectively.</li>
             <li>Used the client API to develop a multi-threaded download client following the boss-worker thread design pattern. The client allows users to simultaneously download files from a specified workload.</li>
             <li>Engineered a multi-threaded server leveraging the server API, capable of handling multiple getfile requests at once, and allowing users to launch their own server instances.</li>
             <li>Received an A in <a href="https://omscs.gatech.edu/cs-6200-introduction-operating-systems" target="_blank">CS 6200</a>.</li>
